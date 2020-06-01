@@ -1,0 +1,10 @@
+D:\Projects\Visual Studio Projects\TimeWidget\bin\x64\Release\TimeWidget.exe.config
+D:\Projects\Visual Studio Projects\TimeWidget\bin\x64\Release\TimeWidget.exe
+D:\Projects\Visual Studio Projects\TimeWidget\bin\x64\Release\TimeWidget.pdb
+D:\Projects\Visual Studio Projects\TimeWidget\obj\x64\Release\TimeWidget.csprojAssemblyReference.cache
+D:\Projects\Visual Studio Projects\TimeWidget\obj\x64\Release\TimeWidget.Form1.resources
+D:\Projects\Visual Studio Projects\TimeWidget\obj\x64\Release\TimeWidget.Properties.Resources.resources
+D:\Projects\Visual Studio Projects\TimeWidget\obj\x64\Release\TimeWidget.csproj.GenerateResource.cache
+D:\Projects\Visual Studio Projects\TimeWidget\obj\x64\Release\TimeWidget.csproj.CoreCompileInputs.cache
+D:\Projects\Visual Studio Projects\TimeWidget\obj\x64\Release\TimeWidget.exe
+D:\Projects\Visual Studio Projects\TimeWidget\obj\x64\Release\TimeWidget.pdb

@@ -5,6 +5,11 @@ namespace TimeWidget
 {
     public partial class Form1 : Form
     {
+
+        private Int32 tmpX;
+        private Int32 tmpY;
+        private bool flMove = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -40,6 +45,30 @@ namespace TimeWidget
         {
             DateTime now = DateTime.Now;
             labelTime.Text = now.ToString("HH:mm:ss");
+        }
+
+        private void labelTime_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (flMove)
+            {
+                this.Left = this.Left + (Cursor.Position.X - tmpX);
+                this.Top = this.Top + (Cursor.Position.Y - tmpY);
+
+                tmpX = Cursor.Position.X;
+                tmpY = Cursor.Position.Y;
+            }
+        }
+
+        private void labelTime_MouseUp(object sender, MouseEventArgs e)
+        {
+            flMove = false;
+        }
+
+        private void labelTime_MouseDown(object sender, MouseEventArgs e)
+        {
+            tmpX = Cursor.Position.X;
+            tmpY = Cursor.Position.Y;
+            flMove = true;
         }
     }
 }

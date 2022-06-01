@@ -13,10 +13,10 @@ namespace TimeWidget.Utils
     {
         static readonly string version = Application.ProductVersion;
         private static readonly WebClient wc = new WebClient();
-        public static string UrlDownload = $"https://github.com/Stive99/TimeWidget/releases/download/{VersionUpdate}/TimeWidget.exe";
         public static string UrlVersion = "https://raw.githubusercontent.com/Stive99/TimeWidget/master/Properties/AssemblyInfo.cs";
         private static readonly string VersionUpdateUrl = wc.DownloadString(UrlVersion);
-        public static string VersionUpdate = Regex.Match(VersionUpdateUrl, @"\[assembly\: AssemblyVersion\(""(\d+\.\d+\.\d+\.\d+)""\)\]").Groups[1].Value;
+        public static string VersionUpdate = Regex.Match(VersionUpdateUrl, @"\[assembly\: AssemblyFileVersion\(""(\d+\.\d+\.\d+\.\d+)""\)\]").Groups[1].Value;
+        public static string UrlDownload = $"https://github.com/Stive99/TimeWidget/releases/download/{VersionUpdate}/TimeWidget.exe";
 
         public static void CheckUpdate()
         {

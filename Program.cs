@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace TimeWidget
@@ -18,13 +16,18 @@ namespace TimeWidget
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.ThreadException += new ThreadExceptionEventHandler(Exception);
 
-            Process pr = RI();
+            /*Process pr = RI();
             if (pr != null)
+            {
                 MessageBox.Show("Приложение уже запущено!", "Приложение запущено!");
+                return;
+            }
             else
-
+            {*/
                 Application.Run(new Form1());
+            //}
         }
         private static Process RI()
         {
@@ -41,6 +44,11 @@ namespace TimeWidget
                 }
             }
             return null;
+        }
+
+        static void Exception(object sender, ThreadExceptionEventArgs e)
+        {
+            MessageBox.Show(e.Exception.ToString());
         }
     }
 }

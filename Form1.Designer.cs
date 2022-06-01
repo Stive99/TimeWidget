@@ -30,9 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.поВерхВсехОконToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вклToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выклToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelTime = new System.Windows.Forms.Label();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
@@ -42,39 +40,23 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.поВерхВсехОконToolStripMenuItem,
+            this.настройкиToolStripMenuItem,
             this.выходToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(175, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(194, 48);
             // 
-            // поВерхВсехОконToolStripMenuItem
+            // настройкиToolStripMenuItem
             // 
-            this.поВерхВсехОконToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.вклToolStripMenuItem,
-            this.выклToolStripMenuItem});
-            this.поВерхВсехОконToolStripMenuItem.Name = "поВерхВсехОконToolStripMenuItem";
-            this.поВерхВсехОконToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.поВерхВсехОконToolStripMenuItem.Text = "По верх всех окон";
-            // 
-            // вклToolStripMenuItem
-            // 
-            this.вклToolStripMenuItem.Name = "вклToolStripMenuItem";
-            this.вклToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
-            this.вклToolStripMenuItem.Text = "Вкл";
-            this.вклToolStripMenuItem.Click += new System.EventHandler(this.вклToolStripMenuItem_Click);
-            // 
-            // выклToolStripMenuItem
-            // 
-            this.выклToolStripMenuItem.Name = "выклToolStripMenuItem";
-            this.выклToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
-            this.выклToolStripMenuItem.Text = "Выкл";
-            this.выклToolStripMenuItem.Click += new System.EventHandler(this.выклToolStripMenuItem_Click);
+            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
+            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.настройкиToolStripMenuItem.Text = "Настройки";
+            this.настройкиToolStripMenuItem.Click += new System.EventHandler(this.настройкиToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.выходToolStripMenuItem.Text = "Закрыть приложение";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
             // labelTime
@@ -82,14 +64,13 @@
             this.labelTime.AutoSize = true;
             this.labelTime.ContextMenuStrip = this.contextMenuStrip1;
             this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTime.Location = new System.Drawing.Point(12, 10);
+            this.labelTime.Location = new System.Drawing.Point(12, 9);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(100, 42);
             this.labelTime.TabIndex = 1;
             this.labelTime.Text = "Time";
+            this.labelTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelTime.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelTime_MouseDown);
-            this.labelTime.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labelTime_MouseMove);
-            this.labelTime.MouseUp += new System.Windows.Forms.MouseEventHandler(this.labelTime_MouseUp);
             // 
             // timerTime
             // 
@@ -108,6 +89,8 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TimeWidget";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -118,12 +101,10 @@
         #endregion
 
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem поВерхВсехОконToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem вклToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem выклToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
-        private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.Timer timerTime;
+        private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
+        public System.Windows.Forms.Label labelTime;
     }
 }
 
